@@ -38,10 +38,67 @@ h3 {
     font-size: 50px;
 }
 
+.social-container {
+    align-self: right;
+    font-size: 24px;
+}
+
+.social-icons {
+    padding: 2px;
+    list-style:none;
+}
+
+.social-icons li {
+    display:inline-block;
+    margin:.10em;
+    position:relative;
+    font-size: 1em;
+}
+
+.social-icons i {
+    color:rgba(233, 230, 230, 0.74);
+    position:absolute;
+    top:13px;
+    left:13px;
+    transition:all 265ms ease-out
+}
+
+.social-icons a {
+    display:inline-block
+}
+
+.social-icons a:before {
+    transform:scale(1);
+    -ms-transform:scale(1);
+    -webkit-transform:scale(1);
+    content:" ";
+    width:48px;
+    height:48px;
+    border-radius:100%;
+    display:block;
+    background:linear-gradient(45deg,#dbd0d523,#e7dfdf65);
+    transition:all 265ms ease-out;
+}
+
+.social-icons a:hover:before {
+    transform:scale(0);
+    transition:all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+    transform:scale(2.2);
+    -ms-transform:scale(2.2);
+    -webkit-transform:scale(2.2);
+    color: #1d1d1d;
+    background:-webkit-linear-gradient(45deg,#1d1d1d,#271f1f);-webkit-background-clip:text;-webkit-text-fill-color:transparent;transition:all 265ms ease-in;
+}
+
+
 /******sobremi******/
 
+
 .sobremi {
-    background-image: url(../imagenes/sobremi.svg);
+    background-image: url(../imagenes/yoo.svg);
     background-size: cover;
     height: 130vh;
     width: 100%;
@@ -101,10 +158,9 @@ p {
 
 /******footer******/
 
-footer {
+/*footer {
     background-color: #151515;
     display: flex;
-    align-items: center center;
     justify-content: space-between;
     margin: 150px 0px;
     padding: 50px 0px;
@@ -114,7 +170,8 @@ footer .left {
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    margin-left: 100px;
+    line-height: 30px;
+    padding: 0px 200px;
 }
 
 footer .left a {
@@ -125,13 +182,12 @@ footer .left a {
 footer .right {
     display: flex;
     flex-direction: column;
-    margin-right: 60px;
 }
 
 footer .right p {
     font-size: 18px;
     line-height: 30px;
-}
+}/*
 
 /*********curriculum**********/
 
@@ -228,8 +284,6 @@ footer .right p {
     padding: 20px 0px;
 }
 
-/***hacer responsive***/
-
 /*********contacto*******/
 
 .contacto_cartita {
@@ -304,8 +358,6 @@ footer .right p {
     margin-top: 100px;
 }
 
-/*******hacer responsive********/
-
 /******webkit*****/
 
  @-webkit-keyframes text-focus-in {
@@ -373,11 +425,101 @@ footer .right p {
         font-size: 2vh;
         width: 50%;
     }
+
+    .habilidades {
+        padding: 0px;
+    }
     
-    .sobremi_curriculum {
-        font-size: 2vh;
-        margin: 70px 50px;
-        font-weight: 500;
+    .habilidades-box li {
+        font-size: 18px;
+    }
+    
+    .habilidades-box {
+        margin: 25px 75px 25px 75px;
+        padding: 25px;
+        gap: 10rem;
+    }
+    
+    .buttons {
+        margin:  0px 75px;
+        padding: 0px 25px;
+        gap: 10rem;
+    }
+    
+    .buttons a{
+        font-size: 18px;
+    }
+
+    /****proyectos****/
+
+    .grid-container {
+        height: 20vh;
+        width: 70vw;
+    }
+    
+    .item1 {
+        margin: 100px 0px 0px 65px;
+        padding: 10px 0px;
+    }
+    
+    .item2 {
+        margin: 100px 65px 0px 0px;
+        padding: 10px 0px;
+    }
+    
+    .item3 {
+        height: 200px;
+        width: 250px;
+        margin: 0px 12px 0px 60px;
+    }
+    
+    .item4 {
+        height: 200px;
+        width: 250px;
+        margin: 0px 60px 0px 12px;
+    }
+    
+    .item5 {
+        height: 200px;
+        width: 250px;
+        margin: 0px 12px 0px 60px;
+    }
+    
+    .item6 {
+        height: 200px;
+        width: 250px;
+        margin: 0px 60px 0px 12px;
+    }
+
+    /****contacto****/
+
+    .contacto_cartita {
+        height: 20vh;
+    }
+    
+    .contacto_cartita form {
+        padding: 25px;
+        gap: 7px;
+    }
+    
+    .contacto_cartita input ,
+    .contacto_cartita textarea {
+        padding: 5px;
+    }
+    
+    .contacto_cartita input {
+        height: 20px;
+    }
+    
+    .contacto_cartita button {
+        font-size: .5rem;
+        height: 20px;
+        border: 1px solid #171717;
+    }
+    
+    .contacto_cartita h3 {
+        font-size: 25px;
+        margin-top: 50px;
     }
 }
 
@@ -395,13 +537,14 @@ footer .right p {
 
     /*****home*****/
 
+
     h1 {
         font-size: 40px;
         text-align: center;
     }
     
     h3 {
-        font-size: 25px;
+        font-size: 18px;
     }
 
     /*****sobremí*****/
@@ -411,18 +554,108 @@ footer .right p {
     }
 
     h2 {
-        font-size: 32px;
-        padding: 50px 0px 25px 0px;
+        font-size: 28px;
+        padding: 5px 0px 5px 0px;
     }
     
     p {
-        font-size: 18px;
-        width: 50%;
+        font-size: 16px;
+        width: 65%;
+    }
+
+    .habilidades {
+        padding: 0px;
     }
     
-    .sobremi_curriculum {
+    .habilidades-box li {
+        font-size: 16px;
+    }
+    
+    .habilidades-box {
+        margin: 14px 40px 14px 40px;
+        padding: 14px;
+        gap: 5rem;
+    }
+    
+    .buttons {
+        margin:  0px 40px;
+        padding: 0px 14px;
+        gap: 5rem;
+    }
+    
+    .buttons a{
+        font-size: 16px;
+    }
+
+    /****proyectos****/
+
+    .grid-container {
+        height: 10vh;
+        width: 35vw;
+    }
+    
+    .item1 {
+        margin: 50px 0px 0px 35px;
+        padding: 5px 0px;
+    }
+    
+    .item2 {
+        margin: 50px 35px 0px 0px;
+        padding: 50px 0px;
+    }
+    
+    .item3 {
+        height: 100px;
+        width: 125px;
+        margin: 0px 6px 0px 30px;
+    }
+    
+    .item4 {
+        height: 100px;
+        width: 125px;
+        margin: 0px 30px 0px 6px;
+    }
+    
+    .item5 {
+        height: 100px;
+        width: 125px;
+        margin: 0px 6px 0px 30px;
+    }
+    
+    .item6 {
+        height: 100px;
+        width: 125px;
+        margin: 0px 30px 0px 6px;
+    }
+
+    /****contacto****/
+
+    .contacto_cartita {
+        height: 10vh;
+    }
+    
+    .contacto_cartita form {
+        padding: 13px;
+        gap: 4px;
+    }
+    
+    .contacto_cartita input ,
+    .contacto_cartita textarea {
+        padding: 2px;
+    }
+    
+    .contacto_cartita input {
+        height: 10px;
+    }
+    
+    .contacto_cartita button {
+        font-size: .5rem;
+        height: 10px;
+        border: 1px solid #171717;
+    }
+    
+    .contacto_cartita h3 {
         font-size: 18px;
-        margin: 25px 50px;
-        font-weight: 500;
+        margin-top: 25px;
     }
 }
